@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+header{
+    width: 100%;
+    min-height: 7vh;
+    /*background: linear-gradient(to top,hsl(189,99%,55%), #0166e1) ;*/
+    background-color: #0166e1;
+
+}
+header a{
+    font-family: cursive;
+    font-size: 30px;
+    margin-left: 2.5%;
+}
+header #historico{
+    border: none;
+    border-radius: 12px;
+    padding: 03px 15px;
+    background-color: #0166e1;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;  
+    
+    margin-left: 55%;
+
+}
+header #dados{
+    border: none;
+    border-radius: 12px;
+    padding: 03px 15px;
+    background-color: #0166e1;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;  
+
+    margin-left: 1%;
+
+}
+header #sair{
+    border: none;
+    border-radius: 12px;
+    padding: 03px 15px;
+    background-color: #0166e1;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;  
+
+    margin-left: 1%;
+}
+header #historico, #dados, #sair{
+    box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.20);
+}
+header #historico:hover, #dados:hover, #sair:hover{
+    background: #01d9e1;
+}
+main{
+    width: 100%;
+    min-height: 93.0vh;
+    background: linear-gradient(to top,hsl(189, 99%, 55%), #0166e1);
+
+    display: flex;
+    /*justify-content: center;*/
+
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+main .form1{
+    background-color: #353249;
+
+    margin-top: 1%;
+    margin-left: 10%;
+    border-radius: 20px;
+    
+    padding: 2%;
+    width: 35%;
+    height: 90vh;
+
+}
+main .form2{
+    background-color: #353249;
+
+    margin-top: 1%;
+    margin-left: 10%;
+    border-radius: 20px;
+
+    padding: 2%;
+    width: 35%;
+    height: 90vh;
+
+}
+main .form1, .form2, label, h1{
+    color: white;
+}
+main .form1 label{
+    margin-left: 1%;
+}
+main .form1 input{
+    border-radius: 12px;
+    border: none;
+    padding: 2px 10px;
+    width: 140px;
+}
+main .form1 .Despesas{
+    margin-top: 3.3%;
+}
+main .form1 .Salary .tittle{
+    margin-left: 16%;
+    color: white;
+}
+main .form1 .Total #TotalDescontos, #TotalReceber{
+    background-color: #353249;
+    color:#fff;
+    border-radius: 10px;
+    padding: 1px 10px;
+    width: 10px;
+}
+main .form1 .Calcular #btnCalcular{
+    background-color: #353249;
+    color:#fff;
+
+    border: 0;
+    outline: 0;
+
+    transition: 0.3 ease-in-out;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-left: 34%;
+    cursor: pointer;
+    margin-top: 15%;
+    font-size: 1em;
+    padding: 03px; 
+    width: 30%;
+}
+main .form1 .Calcular #btnCalcular{
+    box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
+}
+main .form1 .Calcular #btnCalcular:hover{
+    background: #9f9daf;
+    color: #353249;
+}
+
+/* Form 2 */
+
+main .form2 .Despesas .tittle{
+    text-align: center;
+}
+main .form2 label{
+    margin-left: 1%;
+}
+main .form2 input{
+    border-radius: 12px;
+    border: none;
+    padding: 2px 10px;
+    width: 140px;
+}
+main .form2 .Calcular1 #btnCalcular1{
+    background-color: #353249;
+    color:#fff;
+
+    border: 0;
+    outline: 0;
+
+    transition: 0.3 ease-in-out;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-left: 20%;
+    cursor: pointer;
+    margin-top: 4.4%;
+    font-size: 1em;
+    padding: 03px; 
+    width: 30%;
+}
+main .form2 .Calcular1 #btnSalvar{
+    background-color: #353249;
+    color:#fff;
+
+    border: 0;
+    outline: 0;
+
+    transition: 0.3 ease-in-out;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-left: 55%;
+    cursor: pointer;
+    margin-top: -14%;
+    font-size: 1em;
+    padding: 03px; 
+    width: 30%;
+}
+main .form2 .Calcular1 #btnCalcular1, #btnSalvar{
+    box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
+}
+main .form2 .Calcular1 #btnCalcular1:hover{
+    background: #9f9daf;
+    color: #353249;
+}
+main .form2 .Calcular1 #btnSalvar:hover{
+    background: #9f9daf;
+    color: #353249;
+}
+main .form2 .Calcular1 #btnCalcular1, #btnSalvar{
+    vertical-align: middle; 
+}
+main .form2 .Total1 #Despesas, #Investimento{
+    background-color: #353249;
+    color:#fff;
+    border-radius: 10px;
+    padding: 1px 5px;
+    width: 10px;
+    margin-left: 0;
+}

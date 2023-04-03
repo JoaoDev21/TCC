@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Control</title>
+
+    <!-- Logo da Aba de pesquisa (Favicom) -->
+    <link rel="icon" type="imagem/png" href="IMG/calculadora.png" />
+
+    <!-- Conexão ao arquivo CSS. -->
+    <link rel="stylesheet" href="CSS/dashboard.css"> 
+
+    <!-- Conexão ao arquivo Logo. -->
+    <link rel="stylesheet" href="IMG/calculadora.png">
+
+    <!-- Conexão ao arquivo JS. -->
+    <script src="JS/dashboard.js" defer></script>
+
+    <!-- Conexão ao site de Fonts no google. -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Conexão ao site Font Awesome, usamos para acrescentar os olhos do campo senha. -->
+    <script src="https://kit.fontawesome.com/80267d76ac.js" crossorigin="anonymous" defer></script>
+
+</head>
+    <body>
+        
+        <header>
+            <a>Financial Control</a>
+            <button type="button" id="historico">HISTORICO</button>
+            <button type="button" id="dados" onclick="RedirectCad()">CADASTRO</button>
+            <button type="button" id="sair">SAIR</button>
+        </header>
+
+        <main>
+
+            <form class="form1">
+
+                <section class="Salary">
+
+                    <h1 class="tittle">SALARIO E DESCONTOS</h1><br>
+
+                    <hr style="margin-bottom: 2%;">
+                    <label for="salario">Salario:</label>
+                    <input type="number" id="salario" placeholder="R$" style="margin-bottom: 2%;">
+
+                    <label for="Mês">Mês:</label>
+                    <input type="date" id="Month">
+                    <hr style="margin-top: 0; margin-left: 0; margin-right: 0; ">
+                </section>
+                
+                <section class="Despesas">
+
+                    <label for="inss">INSS:</label>
+                    <input type="number" id="inss" placeholder="R$" style="margin-left:49.5% ;margin-top: 3%;"><br>
+
+                    <label for="transporte">VL TRANSPORTE:</label>
+                    <input type="number" id="transporte" placeholder="R$"  style="margin-left:29.1% ;margin-top: 3%;"><br>
+
+                    <label for="VaVr">VA/VR:</label>
+                    <input type="number" id="VaVr" placeholder="R$" style="margin-left:45.7% ;margin-top: 3%;"><br>
+
+                    <label for="convmedico">Convenio Medico:</label>
+                    <input type="number" id="convmedico" placeholder="R$" style="margin-left:24.4% ;margin-top: 3%;"><br>
+
+                    <label for="convodonto">Convenio Odonto:</label>
+                    <input type="number" id="convodonto" placeholder="R$" style="margin-left:24.4% ;margin-top: 3%;"><br>
+
+                    <label for="outros">Outros:</label>
+                    <input type="number" id="outros" placeholder="R$" style="margin-left:44.9% ;margin-top: 3%;"><br>
+                    <hr style="margin-top: 5.5%;  margin-left: 0; margin-right: 0;">
+
+                </section>
+
+                <section class="Total">
+
+                    <label for="TotalDescontos">Total Descontos: R$</label>
+                    <a type="number" id="TotalDescontos"></a><br>
+
+                    <label for="TotalReceber">Total a Receber: R$</label>
+                    <a type="number" id="TotalReceber"></a>
+
+                    <hr style="margin-top: 0;  margin-left: 0; margin-right: 0;">
+                </section>
+
+                <section class="Calcular">
+
+                    <button type="button" id="btnCalcular" onclick="Calcular()">Calcular</button><br>
+
+                </section>
+                
+            </form>
+
+            <form class="form2">
+
+                <section class="Despesas">
+
+                    <h1 class="tittle">DESPESAS E LUCROS</h1><br>
+                    <hr style="margin-bottom: 2%;">
+
+                    <label for="Salario">Salario Liquido:</label>
+                    <input type="number" id="Salliquido" placeholder="R$" style="margin-left:24.8% ;">
+                    <hr style="margin-bottom: 2%; margin-top: 2%;">
+                    
+                    <label for="Condominio">Condominio:</label>
+                    <input type="number" id="Condominio" placeholder="R$" style="margin-left:28.9% ;"><br>
+
+                    <label for="Aluguel">Aluguel:</label>
+                    <input type="number" id="Aluguel" placeholder="R$" style="margin-left:38.1% ;"><br>
+
+                    <label for="Faculdade">Faculdade:</label>
+                    <input type="number" id="Faculdade" placeholder="R$" style="margin-left:32.1% ;"><br>
+
+                    <label for="Carro">Carro:</label>
+                    <input type="number" id="Carro" placeholder="R$" style="margin-left:41.5% ;"><br>
+
+                    <label for="Luz">Conta de Luz:</label>
+                    <input type="number" id="Luz" placeholder="R$" style="margin-left:28% ;"><br>
+
+                    <label for="Internet">Internet:</label>
+                    <input type="number" id="Internet" placeholder="R$" style="margin-left:37.9% ;"><br>
+
+                    <label for="Agua">Conta de Água:</label>
+                    <input type="number" id="Agua" placeholder="R$" style="margin-left:23.7% ;"><br>
+
+                    <label for="Mercado">Mercado:</label>
+                    <input type="number" id="Mercado" placeholder="R$" style="margin-left:35.4% ;"><br>
+
+                    <label for="Cartao">Cartão:</label>
+                    <input type="number" id="Cartao" placeholder="R$" style="margin-left:39% ;"><br>
+
+                    <label for="Lazer">Lazer:</label>
+                    <input type="number" id="Lazer" placeholder="R$" style="margin-left:42.7% ;"> <br>                
+
+                    <label for="Outros">Outros:</label>
+                    <input type="number" id="Outros" placeholder="R$" style="margin-left:39.8% ;"><br>
+
+                </section>
+                 <section class="Total1">
+
+                    <hr style="margin-top: 2%;">
+                    <label for="Despesas">Despesas: R$</label>
+                    <a type="number" id="Despesas"></a><br>
+
+                    <label for="Investimento">Investimento: R$</label>
+                    <a type="number" id="Investimento"></a>
+                    <hr>
+
+                 </section>
+                 <section class="Calcular1">
+
+                    <button type="button" id="btnCalcular1" onclick="Calcular_Despesas()">Calcular</button><br>
+                    <button type="button" id="btnSalvar" onclick="Salvar()">Salvar</button>
+
+                 </section>
+
+            </form>
+        </main> 
+    </body>
+</html>

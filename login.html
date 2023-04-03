@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Control</title>
+
+    <!-- Logo da Aba de pesquisa (Favicom) -->
+    <link rel="icon" type="imagem/png" href="IMG/calculadora.png" />
+
+    <!-- Conexão ao arquivo CSS. -->
+    <link rel="stylesheet" href="CSS/login.css"> 
+
+    <!-- Conexão ao arquivo Logo. -->
+    <link rel="stylesheet" href="IMG/calculadora.png">
+ 
+    <!-- Conexão ao arquivo JS. --> 
+    <script src="JS/login.js" defer></script>
+
+    <!-- Conexão ao site de Fonts no google. -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Conexão ao site Font Awesome, usamos para acrescentar os olhos do campo senha. -->
+    <script src="https://kit.fontawesome.com/80267d76ac.js" crossorigin="anonymous" defer></script>
+
+</head>
+<body>
+    <main>
+        <form>
+
+            <img src="IMG/calculadora.png" width="20%" height="20%"><br>
+            <b style="color:#bcc4d1 ; font-family: serif;">Financial Control</b>
+            <a style="color:#bcc4d1 ; font-family: serif;">Sua Vida Financeira Sob Controle</a>
+
+            <section class="inputs-containers">
+                <input type="email" placeholder="exemple@finance.com" id="email">
+    
+                <div class="password-container">
+                    <input type="password"           id="FieldPassword" class="FieldPassword" placeholder="********">
+                    <i class="fa-solid fa-eye"       id="eye"      onclick="showPassword()"></i>
+                    <i class="fa-solid fa-eye-slash" id="eyeSlash" onclick="showPassword()"></i>
+                </div>
+            </section class>
+    
+            <section class="password-infos">
+                <!--<div>
+                    <span style="color: #bcc4d1;" onclick="lkLembrarSenha">Lembrar Senha?</span>
+                </div>-->
+                <a style="color: #bcc4d1;" onclick="lkRecSenha" href="#">Recuperar Senha</a>
+            </section>
+                
+            <button type="button" onclick="checkInputs()" id="btnLogin">Login</button> 
+                     
+        </form>
+    </main>   
+</body>
+</html>
