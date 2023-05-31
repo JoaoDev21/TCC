@@ -26,63 +26,67 @@
 
 </head>
     <body>
-        
         <header>
             <a>Financial Control</a>
             <button type="button" id="historico">HISTORICO</button>
             <button type="button" id="dados" onclick="RedirectCad()">CADASTRO</button>
             <button type="button" id="sair">SAIR</button>
-        </header>
+        </header><hr>
+        
 
         <main>
-
+            
+            
             <form class="form1">
 
                 <section class="Salary">
 
-                    <h1 class="tittle">SALARIO E DESCONTOS</h1><br>
+                    <br><h1 class="tittle">SALARIO E DESCONTOS</h1><br>
 
-                    <hr style="margin-bottom: 2%;">
+                    <hr><br>
                     <label for="salario">Salario:</label>
-                    <input type="number" id="salario" placeholder="R$" style="margin-bottom: 2%;">
+                    <input type="number" id="salario" placeholder="R$">
 
                     <label for="Mês">Mês:</label>
-                    <input type="date" id="Month">
-                    <hr style="margin-top: 0; margin-left: 0; margin-right: 0; ">
+                    <input type="date" id="Month"><br><br>
+                    <hr><br>
                 </section>
                 
                 <section class="Despesas">
 
-                    <label for="inss">INSS:</label>
-                    <input type="number" id="inss" placeholder="R$" style="margin-left:49.5% ;margin-top: 3%;"><br>
+                    <section class="lbs"></section>
+                    <section class="inp"></section>
 
-                    <label for="transporte">VL TRANSPORTE:</label>
-                    <input type="number" id="transporte" placeholder="R$"  style="margin-left:29.1% ;margin-top: 3%;"><br>
 
-                    <label for="VaVr">VA/VR:</label>
-                    <input type="number" id="VaVr" placeholder="R$" style="margin-left:45.7% ;margin-top: 3%;"><br>
+                        <label for="inss">INSS:</label><br>
+                        <input type="number" id="inss" placeholder="R$" ><br>
 
-                    <label for="convmedico">Convenio Medico:</label>
-                    <input type="number" id="convmedico" placeholder="R$" style="margin-left:24.4% ;margin-top: 3%;"><br>
+                        <label for="transporte">VL Transporte:</label><br>
+                        <input type="number" id="transporte" placeholder="R$"  ><br>
 
-                    <label for="convodonto">Convenio Odonto:</label>
-                    <input type="number" id="convodonto" placeholder="R$" style="margin-left:24.4% ;margin-top: 3%;"><br>
+                        <label for="VaVr">VA/VR:</label><br>
+                        <input type="number" id="VaVr" placeholder="R$" ><br>
 
-                    <label for="outros">Outros:</label>
-                    <input type="number" id="outros" placeholder="R$" style="margin-left:44.9% ;margin-top: 3%;"><br>
-                    <hr style="margin-top: 5.5%;  margin-left: 0; margin-right: 0;">
+                        <label for="convmedico">Convenio Medico:</label><br>
+                        <input type="number" id="convmedico" placeholder="R$" ><br>
 
-                </section>
+                        <label for="convodonto">Convenio Odonto:</label><br>
+                        <input type="number" id="convodonto" placeholder="R$" ><br>
+
+                        <label for="outros">Outros:</label><br>
+                        <input type="number" id="outros" placeholder="R$" ><br>
+                    <br><br>
+                    <hr>
+                </section><br>
 
                 <section class="Total">
 
                     <label for="TotalDescontos">Total Descontos: R$</label>
-                    <a type="number" id="TotalDescontos"></a><br>
+                    <a type="number" id="TotalDescontos"></a><br><br>
 
                     <label for="TotalReceber">Total a Receber: R$</label>
-                    <a type="number" id="TotalReceber"></a>
+                    <a type="number" id="TotalReceber"></a><br><br><hr>
 
-                    <hr style="margin-top: 0;  margin-left: 0; margin-right: 0;">
                 </section>
 
                 <section class="Calcular">
@@ -97,55 +101,58 @@
 
                 <section class="Despesas">
 
-                    <h1 class="tittle">DESPESAS E LUCROS</h1><br>
-                    <hr style="margin-bottom: 2%;">
+                    <br><h1 class="tittle">DESPESAS E LUCROS</h1><br>
+                    <hr><br>
 
                     <label for="Salario">Salario Liquido:</label>
-                    <input type="number" id="Salliquido" placeholder="R$" style="margin-left:24.8% ;">
-                    <hr style="margin-bottom: 2%; margin-top: 2%;">
+                    <input type="number" id="Salliquido" placeholder="R$" ><br><br>
+                    <hr>
+
+                    <section class="Dps"></section>
+                    <section class="inps"></section>
                     
-                    <label for="Condominio">Condominio:</label>
-                    <input type="number" id="Condominio" placeholder="R$" style="margin-left:28.9% ;"><br>
+                    <label for="Condominio">Condominio:</label><br>
+                    <input type="number" id="Condominio" placeholder="R$" ><br>
 
-                    <label for="Aluguel">Aluguel:</label>
-                    <input type="number" id="Aluguel" placeholder="R$" style="margin-left:38.1% ;"><br>
+                    <label for="Aluguel">Aluguel:</label><br>
+                    <input type="number" id="Aluguel" placeholder="R$" ><br>
 
-                    <label for="Faculdade">Faculdade:</label>
-                    <input type="number" id="Faculdade" placeholder="R$" style="margin-left:32.1% ;"><br>
+                    <label for="Faculdade">Faculdade:</label><br>
+                    <input type="number" id="Faculdade" placeholder="R$" ><br>
 
-                    <label for="Carro">Carro:</label>
-                    <input type="number" id="Carro" placeholder="R$" style="margin-left:41.5% ;"><br>
+                    <label for="Carro">Carro:</label><br>
+                    <input type="number" id="Carro" placeholder="R$" ><br>
 
-                    <label for="Luz">Conta de Luz:</label>
-                    <input type="number" id="Luz" placeholder="R$" style="margin-left:28% ;"><br>
+                    <label for="Luz">Conta de Luz:</label><br>
+                    <input type="number" id="Luz" placeholder="R$" ><br>
 
-                    <label for="Internet">Internet:</label>
-                    <input type="number" id="Internet" placeholder="R$" style="margin-left:37.9% ;"><br>
+                    <label for="Internet">Internet:</label><br>
+                    <input type="number" id="Internet" placeholder="R$" ><br>
 
-                    <label for="Agua">Conta de Água:</label>
-                    <input type="number" id="Agua" placeholder="R$" style="margin-left:23.7% ;"><br>
+                    <label for="Agua">Conta de Água:</label><br>
+                    <input type="number" id="Agua" placeholder="R$" ><br>
 
-                    <label for="Mercado">Mercado:</label>
-                    <input type="number" id="Mercado" placeholder="R$" style="margin-left:35.4% ;"><br>
+                    <label for="Mercado">Mercado:</label><br>
+                    <input type="number" id="Mercado" placeholder="R$" ><br>
 
-                    <label for="Cartao">Cartão:</label>
-                    <input type="number" id="Cartao" placeholder="R$" style="margin-left:39% ;"><br>
+                    <label for="Cartao">Cartão:</label><br>
+                    <input type="number" id="Cartao" placeholder="R$" ><br>
 
-                    <label for="Lazer">Lazer:</label>
-                    <input type="number" id="Lazer" placeholder="R$" style="margin-left:42.7% ;"> <br>                
+                    <label for="Lazer">Lazer:</label><br>
+                    <input type="number" id="Lazer" placeholder="R$" > <br>                
 
-                    <label for="Outros">Outros:</label>
-                    <input type="number" id="Outros" placeholder="R$" style="margin-left:39.8% ;"><br>
+                    <label for="Outros">Outros:</label><br>
+                    <input type="number" id="Outros" placeholder="R$" ><br><br>
 
                 </section>
                  <section class="Total1">
 
-                    <hr style="margin-top: 2%;">
+                    <hr><br>
                     <label for="Despesas">Despesas: R$</label>
-                    <a type="number" id="Despesas"></a><br>
+                    <a type="number" id="Despesas"></a><br><br>
 
                     <label for="Investimento">Investimento: R$</label>
-                    <a type="number" id="Investimento"></a>
+                    <a type="number" id="Investimento"></a><br><br>
                     <hr>
 
                  </section>
