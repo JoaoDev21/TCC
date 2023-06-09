@@ -77,7 +77,7 @@ function GerarXLS() {
       salario: document.getElementById('salario').value,
       mes: document.getElementById('Month').value,
       inss: document.getElementById('INSS_Retido').innerText,
-      transporte: document.getElementById('transporte').value,
+      transporte: document.getElementById('VT_Retido').innerText,
       vaVr: document.getElementById('VaVr').value,
       convMedico: document.getElementById('convmedico').value,
       convOdonto: document.getElementById('convodonto').value,
@@ -93,15 +93,15 @@ function GerarXLS() {
     // Converter os dados do formulário para o formato XLS
     var conteudoXLS = '<table>';
     conteudoXLS += '<tr>';
-    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Salário</td>';
-    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Mês</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Salario</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Data</td>';
     conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">INSS</td>';
-    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Transporte</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Vale Transporte</td>';
     conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">VA/VR</td>';
-    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Convênio Médico</td>';
-    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Convênio Odonto</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Convenio Medico</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Convenio Odonto</td>';
     conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Outros</td>';
-    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Total Descontos</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Total de Descontos</td>';
     conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Total a Receber</td>';
     conteudoXLS += '</tr>';
 
@@ -130,19 +130,6 @@ function GerarXLS() {
     linkDownload.click();
     document.body.removeChild(linkDownload);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 var Salliquido   = document.getElementById('Salliquido');
 var Condominio   = document.getElementById('Condominio');
