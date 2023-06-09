@@ -62,6 +62,57 @@ function Calcular() {
     }
 }
 
+// Função para gerar o arquivo XLS
+function GerarXLS() {
+    // Dados do formulário (classe form1)
+    var dadosFormulario = {
+      salario: document.getElementById('salario').value,
+      mes: document.getElementById('Month').value,
+      inss: document.getElementById('INSS_Retido').innerText,
+      transporte: document.getElementById('transporte').value,
+      vaVr: document.getElementById('VaVr').value,
+      convMedico: document.getElementById('convmedico').value,
+      convOdonto: document.getElementById('convodonto').value,
+      outros: document.getElementById('outros').value,
+      totalDescontos: document.getElementById('TotalDescontos').innerText,
+      totalReceber: document.getElementById('TotalReceber').innerText
+    };
+
+    // Converter os dados do formulário para o formato XLS
+    var conteudoXLS = 'Salário\tMês\tINSS\tTransporte\tVA/VR\tConvênio Médico\tConvênio Odonto\tOutros\tTotal Descontos\tTotal a Receber\n'; // Cabeçalho do XLS
+
+    conteudoXLS += dadosFormulario.salario + '\t';
+    conteudoXLS += dadosFormulario.mes + '\t';
+    conteudoXLS += dadosFormulario.inss + '\t';
+    conteudoXLS += dadosFormulario.transporte + '\t';
+    conteudoXLS += dadosFormulario.vaVr + '\t';
+    conteudoXLS += dadosFormulario.convMedico + '\t';
+    conteudoXLS += dadosFormulario.convOdonto + '\t';
+    conteudoXLS += dadosFormulario.outros + '\t';
+    conteudoXLS += dadosFormulario.totalDescontos + '\t';
+    conteudoXLS += dadosFormulario.totalReceber + '\n';
+
+    // Criar um elemento de link temporário para download
+    var linkDownload = document.createElement('a');
+    linkDownload.href = 'data:application/vnd.ms-excel,' + encodeURIComponent(conteudoXLS);
+    linkDownload.download = 'formulario.xls';
+
+    // Adicionar o link ao documento e simular o clique
+    document.body.appendChild(linkDownload);
+    linkDownload.click();
+    document.body.removeChild(linkDownload);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 var Salliquido   = document.getElementById('Salliquido');
