@@ -1,7 +1,6 @@
 var salario        = document.getElementById('salario');
 var INSS_Retido    = document.getElementById('INSS_Retido');
 var VT_Retido      = document.getElementById('VT_Retido')
-var transporte     = document.getElementById('transporte');
 var VaVr           = document.getElementById('VaVr');
 var convmedico     = document.getElementById('convmedico');
 var convodonto     = document.getElementById('convodonto');
@@ -39,7 +38,7 @@ function CalcularINSS() {
 function Calcular() {
     var SalarioValue    = parseFloat(salario.value.trim().replace(',', '.'));
     var inssValue       = parseFloat(INSS_Retido.innerText.trim().replace(/[^\d.,]/g, '').replace(',', '.'));
-    var transporteValue = parseFloat(transporte.value.trim().replace(',', '.'));
+    var transporteValue = parseFloat(VT_Retido.innerText.trim().replace(/[^\d.,]/g, '').replace(',', '.'));
     var VaVrValue       = parseFloat(VaVr.value.trim().replace(',', '.'));
     var convmedicoValue = parseFloat(convmedico.value.trim().replace(',', '.'));
     var convodontoValue = parseFloat(convodonto.value.trim().replace(',', '.'));
