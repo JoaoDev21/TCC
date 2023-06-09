@@ -78,19 +78,39 @@ function GerarXLS() {
       totalReceber: document.getElementById('TotalReceber').innerText
     };
 
-    // Converter os dados do formulário para o formato XLS
-    var conteudoXLS = 'Salário\tMês\tINSS\tTransporte\tVA/VR\tConvênio Médico\tConvênio Odonto\tOutros\tTotal Descontos\tTotal a Receber\n'; // Cabeçalho do XLS
+    // Estilos CSS para a planilha
+    var estiloCelulaCabecalho = 'background-color: #efefef; font-weight: bold;';
+    var estiloCelulaNormal = 'background-color: #ffffff;';
 
-    conteudoXLS += dadosFormulario.salario + '\t';
-    conteudoXLS += dadosFormulario.mes + '\t';
-    conteudoXLS += dadosFormulario.inss + '\t';
-    conteudoXLS += dadosFormulario.transporte + '\t';
-    conteudoXLS += dadosFormulario.vaVr + '\t';
-    conteudoXLS += dadosFormulario.convMedico + '\t';
-    conteudoXLS += dadosFormulario.convOdonto + '\t';
-    conteudoXLS += dadosFormulario.outros + '\t';
-    conteudoXLS += dadosFormulario.totalDescontos + '\t';
-    conteudoXLS += dadosFormulario.totalReceber + '\n';
+    // Converter os dados do formulário para o formato XLS
+    var conteudoXLS = '<table>';
+    conteudoXLS += '<tr>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Salário</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Mês</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">INSS</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Transporte</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">VA/VR</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Convênio Médico</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Convênio Odonto</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Outros</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Total Descontos</td>';
+    conteudoXLS += '<td style="' + estiloCelulaCabecalho + '">Total a Receber</td>';
+    conteudoXLS += '</tr>';
+
+    conteudoXLS += '<tr>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.salario + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.mes + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.inss + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.transporte + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.vaVr + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.convMedico + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.convOdonto + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.outros + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.totalDescontos + '</td>';
+    conteudoXLS += '<td style="' + estiloCelulaNormal + '">' + dadosFormulario.totalReceber + '</td>';
+    conteudoXLS += '</tr>';
+
+    conteudoXLS += '</table>';
 
     // Criar um elemento de link temporário para download
     var linkDownload = document.createElement('a');
@@ -102,6 +122,7 @@ function GerarXLS() {
     linkDownload.click();
     document.body.removeChild(linkDownload);
 }
+
 
 
 
