@@ -27,18 +27,18 @@
 </head>
     <body>
         <header>
-            <a>Financial Control</a>
-            <button type="button" id="historico">HISTORICO</button>
-            <button type="button" id="dados" onclick="RedirectCad()">CADASTRO</button>
+            <h1>Sistema de Controle Financeiro</h1>
+            <button type="button" id="historico" style="visibility: hidden;">HISTORICO</button>
+            <button type="button" id="dados" onclick="RedirectCad()"style="visibility: hidden;">CADASTRO</button>
             <button type="button" id="sair">SAIR</button>
-        </header><hr>
+        </header>
         
-        <main>
+        <main><hr>
             <form class="form1">
 
                 <section class="Salary">
 
-                    <br><h1 class="tittle">SALARIO E DESCONTOS</h1><br>
+                    <br><h2 class="tittle">SALARIO E DESCONTOS</h2><br>
 
                     <hr><br>
                     <label for="salario">Salario:</label>
@@ -46,7 +46,7 @@
 
                     <label for="Mês">Mês:</label>
                     <input type="date" id="Month"><br><br>
-                    <hr><br>
+                    <br>
                 </section>
                 
                 <section class="Despesas">
@@ -56,28 +56,32 @@
 
 
                         <label for="inss">INSS:</label>
-                        <button type="button" id="btnCalcular" onclick="CalcularINSS()">Calcular</button><br><br>
-                        <a type="number" id="INSS_Retido"></a><br><br>
+                        <a type="number" id="INSS_Retido" style="font-size: large;"></a><br>
+                        <button type="button" id="btnCalcular" onclick="CalcularINSS()">Calcular</button><br>
+                        
 
 
                         <!--<input type="number" id="inss" placeholder="R$" ><br>-->
+                        <section class="sec1">
+                        <label for="transporte">VL Transporte:</label>
+                        <input type="text" id="transporte" placeholder="R$"  >
 
-                        <label for="transporte">VL Transporte:</label><br>
-                        <input type="number" id="transporte" placeholder="R$"  ><br>
+                        <label for="VaVr">VA/VR:</label>
+                        <input type="text" id="VaVr" placeholder="R$" >
 
-                        <label for="VaVr">VA/VR:</label><br>
-                        <input type="number" id="VaVr" placeholder="R$" ><br>
+                        <label for="convmedico">Convenio Medico:</label>
+                        <input type="text" id="convmedico" placeholder="R$" >
+                        </section>
 
-                        <label for="convmedico">Convenio Medico:</label><br>
-                        <input type="number" id="convmedico" placeholder="R$" ><br>
+                        <section class="sec2">
+                        <label for="convodonto">Convenio Odonto:</label>
+                        <input type="text" id="convodonto" placeholder="R$" >
 
-                        <label for="convodonto">Convenio Odonto:</label><br>
-                        <input type="number" id="convodonto" placeholder="R$" ><br>
-
-                        <label for="outros">Outros:</label><br>
-                        <input type="number" id="outros" placeholder="R$" ><br>
-                    <br><br>
-                    <hr>
+                        <label for="outros">Outros:</label>
+                        <input type="text" id="outros" placeholder="R$" >
+                        <br><br>
+                        </section>
+                    
                 </section><br>
 
                 <section class="Total">
@@ -86,7 +90,7 @@
                     <a type="number" id="TotalDescontos"></a><br><br>
 
                     <label for="TotalReceber">Total a Receber: </label>
-                    <a type="number" id="TotalReceber"></a><br><br><hr>
+                    <a type="number" id="TotalReceber"></a><br><br>
 
                 </section>
 
@@ -97,13 +101,13 @@
 
                 </section>
                 
-            </form>
+            </form><hr>
 
             <form class="form2">
 
                 <section class="Despesas">
 
-                    <br><h1 class="tittle">DESPESAS E LUCROS</h1><br>
+                    <br><h2 class="tittle">DESPESAS E LUCROS</h2><br>
                     <hr><br>
 
                     <label for="Salario">Salario Liquido:</label>

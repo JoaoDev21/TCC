@@ -1,55 +1,61 @@
-/**{
-    margin: 0;
-}
-html, body{
-    height: 100%;
-}
-body{
-    width: 100%;
-    background: linear-gradient(to top,hsl(189, 99%, 55%), #0166e1);
-}
 header{
-    text-align: center;
-    display: inline-block;
-}
-hr{
-    width: 98%;
-    margin-left: 1%;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    /*position: fixed;*/
 }
 main{
-    width: 100%; 
-    margin: 1%;
+    margin-top: 0;
 }
-
-.form1, .form2{
-    margin-left: 3%;
-    background-color: #353249;
-    width: 40%;
-    height: 500px;
-    display: inline-table ;
-    border-radius: 20px;
-    border-color: black;
-}
-section h1{
-    text-align: center;
-    color: #bcc4d1;
-}
-section label{
-    padding-left: 10%;
-    color: #bcc4d1;
-}
-.form1 .lbs, .inp{
-    display: inline-block;
-    width: 30%;
-    padding-left: 7.5%;
-}
-.form2 .Dps{
-    display: inline-block;
-    width: 30%;
-    padding-left: 7.5%;
-}*/
-
 body{
     background: linear-gradient(to top,hsl(189, 99%, 55%), #0166e1);
+}
+h1, h2{
+    margin: 1%;
+}
+label{
+    font-size:large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1%;
+}
+input{
+    margin: 1%;
+    width: 15%;
+    height: 15px;
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+
+    font-size: 16px;
+    color: #312e42;
+
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+
+}
+button {
+    background-color: #353249;
+    width: 10%;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin: 1%;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.3 ease-in-out;
+
+}
+button{
+    color: #bcc4d1;
+    box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
+}
+button:hover{
+    background: #9f9daf;
+    color: #353249;
+}
+.sec1, .sec2{
+    align-items: center;
+    justify-content: space-between;
 }
