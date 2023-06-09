@@ -1,5 +1,6 @@
 var salario        = document.getElementById('salario');
 var INSS_Retido    = document.getElementById('INSS_Retido');
+var VT_Retido      = document.getElementById('VT_Retido')
 var transporte     = document.getElementById('transporte');
 var VaVr           = document.getElementById('VaVr');
 var convmedico     = document.getElementById('convmedico');
@@ -10,6 +11,7 @@ function CalcularINSS() {
     var SalarioValue = salario.value.trim();
     var aliquotas = [0.075, 0.09, 0.12, 0.14, 0.145, 0.165, 0.19, 0.22];
     var Resultado_INSS;
+    var Resultado_VT = SalarioValue * 0.06;
 
     if (SalarioValue === '') {
         alert('Preencha o Campo Salario');
@@ -25,6 +27,9 @@ function CalcularINSS() {
             break;  
         }
     }
+    var formattedValue1 = Resultado_VT.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    VT_Retido.textContent = formattedValue1;
+    console.log('Valor de Resultado_VT:', Resultado_VT);
 
     var formattedValue = Resultado_INSS.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     INSS_Retido.textContent = formattedValue;

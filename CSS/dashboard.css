@@ -54,10 +54,12 @@ button:hover{
     background: #9f9daf;
     color: #353249;
 }
-main .form1 .Despesas .s1,.s2,.s3,.s4,.s5, .s6, .s7{
+main .form1 .Despesas .s1,.s3, .s4{
     margin: 1%;
     display: inline-block;  
     align-items: center;
     justify-content: space-between;
 }
-
+.s2, #INSS_Retido, #VT_Retido{
+    margin-left: 1%;
+}
