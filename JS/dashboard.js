@@ -1,6 +1,6 @@
 var salario        = document.getElementById('salario');
 var INSS_Retido    = document.getElementById('INSS_Retido');
-var transporte     = document.getElementById('transporte');
+var VT_Retido      = document.getElementById('VT_Retido')
 var VaVr           = document.getElementById('VaVr');
 var convmedico     = document.getElementById('convmedico');
 var convodonto     = document.getElementById('convodonto');
@@ -10,6 +10,7 @@ function CalcularINSS() {
     var SalarioValue = salario.value.trim();
     var aliquotas = [0.075, 0.09, 0.12, 0.14, 0.145, 0.165, 0.19, 0.22];
     var Resultado_INSS;
+    var Resultado_VT = SalarioValue * 0.06;
 
     if (SalarioValue === '') {
         alert('Preencha o Campo Salario');
@@ -25,6 +26,9 @@ function CalcularINSS() {
             break;  
         }
     }
+    var formattedValue1 = Resultado_VT.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    VT_Retido.textContent = formattedValue1;
+    console.log('Valor de Resultado_VT:', Resultado_VT);
 
     var formattedValue = Resultado_INSS.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     INSS_Retido.textContent = formattedValue;
@@ -34,7 +38,7 @@ function CalcularINSS() {
 function Calcular() {
     var SalarioValue    = parseFloat(salario.value.trim().replace(',', '.'));
     var inssValue       = parseFloat(INSS_Retido.innerText.trim().replace(/[^\d.,]/g, '').replace(',', '.'));
-    var transporteValue = parseFloat(transporte.value.trim().replace(',', '.'));
+    var transporteValue = parseFloat(VT_Retido.innerText.trim().replace(/[^\d.,]/g, '').replace(',', '.'));
     var VaVrValue       = parseFloat(VaVr.value.trim().replace(',', '.'));
     var convmedicoValue = parseFloat(convmedico.value.trim().replace(',', '.'));
     var convodontoValue = parseFloat(convodonto.value.trim().replace(',', '.'));
@@ -56,7 +60,11 @@ function Calcular() {
 
     if (isNaN(SalarioValue) || SalarioValue === '') {
         alert('O Valor do Salario Encontra-se Vazio ou Inválido!');
-    } else {
+    } 
+    else if(isNaN(inssValue) || inssValue === ''){
+        alert('Deve calcular o valor de INSS antes!');
+    }
+    else {
         document.getElementById("TotalReceber").textContent = formattedValue1;
         document.getElementById("TotalDescontos").textContent = formattedValue2;
     }

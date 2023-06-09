@@ -41,46 +41,52 @@
                     <br><h2 class="tittle">SALARIO E DESCONTOS</h2><br>
 
                     <hr><br>
-                    <label for="salario">Salario:</label>
-                    <input type="number" id="salario" placeholder="R$">
-
-                    <label for="Mês">Mês:</label>
-                    <input type="date" id="Month"><br><br>
-                    <br>
+                    <section class="s3">
+                        <label for="salario">Salario:</label><br>
+                        <input type="number" id="salario" placeholder="R$">
+                    </section>
+                    <section class="s4">
+                        <label for="Mês">Mês:</label><br>
+                        <input type="date" id="Month">
+                    </section>
+                    <br><br>
                 </section>
                 
                 <section class="Despesas">
 
-                    <section class="lbs"></section>
-                    <section class="inp"></section>
+                    <section class="s2"></section>
+                        <label for="inss">INSS:</label><br><br>
+                        <a type="number" id="INSS_Retido" style="font-size: large;"></a><br><br>
 
+                        <label for="transporte">VL Transporte:</label><br><br>
+                        <a type="number" id="VT_Retido" style="font-size: large;"></a><br><br>
 
-                        <label for="inss">INSS:</label>
-                        <a type="number" id="INSS_Retido" style="font-size: large;"></a><br>
                         <button type="button" id="btnCalcular" onclick="CalcularINSS()">Calcular</button><br>
+
+                        <section class="s1">
+                            <label for="VaVr">VA/VR:</label><br>
+                            <input type="text" id="VaVr" placeholder="R$" >
+                        </section>
+                        <section class="s1">
+                            <label for="convmedico">Convenio Medico:</label><br>
+                            <input type="text" id="convmedico" placeholder="R$" >
+                        </section>
+                        <section class="s1">
+                            <label for="convodonto">Convenio Odonto:</label><br>
+                            <input type="text" id="convodonto" placeholder="R$" >
+                        </section>
+                        <section class="s1">
+                            <label for="outros">Outros:</label><br>
+                            <input type="text" id="outros" placeholder="R$" >
+                        </section>
+
+                        
                         
 
+                        
 
-                        <!--<input type="number" id="inss" placeholder="R$" ><br>-->
-                        <section class="sec1">
-                        <label for="transporte">VL Transporte:</label>
-                        <input type="text" id="transporte" placeholder="R$"  >
-
-                        <label for="VaVr">VA/VR:</label>
-                        <input type="text" id="VaVr" placeholder="R$" >
-
-                        <label for="convmedico">Convenio Medico:</label>
-                        <input type="text" id="convmedico" placeholder="R$" >
-                        </section>
-
-                        <section class="sec2">
-                        <label for="convodonto">Convenio Odonto:</label>
-                        <input type="text" id="convodonto" placeholder="R$" >
-
-                        <label for="outros">Outros:</label>
-                        <input type="text" id="outros" placeholder="R$" >
+                        
                         <br><br>
-                        </section>
                     
                 </section><br>
 
