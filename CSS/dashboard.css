@@ -1,37 +1,58 @@
-header{
+* {
+    margin: 0;
+}
+
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     /*position: fixed;*/
 }
-main{
+
+main {
     margin-top: 0;
 }
-body{
-    background: linear-gradient(to top,hsl(189, 99%, 55%), #0166e1);
+
+span {
+    cursor: pointer;
+    background-color: transparent;
+    font-size: x-large;
+    margin: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    align-items: center;
 }
-h1, h2{
+
+body {
+    background: linear-gradient(to top, hsl(189, 99%, 55%), #0166e1);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+h1, h2 {
     margin: 1%;
 }
-label{
-    font-size:large;
+
+label {
+    font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 1%;
 }
-input{
+
+input {
     margin: 1%;
     height: 15px;
     padding: 8px 15px;
     border: 0;
     outline: 0;
     border-radius: 12px;
-
     font-size: 16px;
     color: #312e42;
-
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-
 }
+
 button {
     background-color: #353249;
     width: 85px;
@@ -43,23 +64,29 @@ button {
     font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
-    transition: 0.3 ease-in-out;
-
-}
-button{
+    transition: 0.3s ease-in-out;
     color: #bcc4d1;
     box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
 }
-button:hover{
+
+button:hover {
     background: #9f9daf;
     color: #353249;
 }
-main .form1 .Despesas .s1,.s3, .s4{
+
+main .form1 .Despesas .s1,
+.s3,
+.s4,
+.s5 {
     margin: 1%;
-    display: inline-block;  
+    display: inline-block;
     align-items: center;
     justify-content: space-between;
 }
-.s2, #INSS_Retido, #VT_Retido{
+
+.s2,
+#INSS_Retido,
+#VT_Retido {
     margin-left: 1%;
 }
+

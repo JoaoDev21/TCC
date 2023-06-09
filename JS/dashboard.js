@@ -130,7 +130,7 @@ function GerarXLS() {
     linkDownload.click();
     document.body.removeChild(linkDownload);
 }
-/*
+
 var Salliquido   = document.getElementById('Salliquido');
 var Condominio   = document.getElementById('Condominio');
 var Aluguel      = document.getElementById('Aluguel');
@@ -145,32 +145,64 @@ var Lazer        = document.getElementById('Lazer');
 var Outros       = document.getElementById('Outros');
 
 function Calcular_Despesas(){
-    var SalliquidoValue   = Salliquido.value    .trim();
-    var CondominioValue   = Condominio.value    .trim();
-    var AluguelValue      = Aluguel.value       .trim();
-    var FaculdadeValue    = Faculdade.value     .trim();
-    var CarroValue        = Carro.value         .trim();
-    var LuzValue          = Luz.value           .trim();
-    var AguaValue         = Agua.value          .trim();
-    var InternetValue     = Internet.value      .trim();
-    var MercadoValue      = Mercado.value       .trim();
-    var CartaoValue       = Cartao.value        .trim();
-    var LazerValue        = Lazer.value         .trim();
-    var OutrosValue       = Outros.value        .trim();
-    var DespesasValue     = parseFloat(CondominioValue) + parseFloat(AluguelValue) + parseFloat(FaculdadeValue) + parseFloat(CarroValue) + parseFloat(LuzValue) + parseFloat(AguaValue) + parseFloat(InternetValue) + parseFloat(MercadoValue) + parseFloat(CartaoValue) + parseFloat(LazerValue) + parseFloat(OutrosValue);
-    var InvestimentoValue = SalliquidoValue -DespesasValue//- CondominioValue - AluguelValue - FaculdadeValue - CarroValue - LuzValue - AguaValue - InternetValue - MercadoValue - CartaoValue - LazerValue - LazerValue;
+    var SalliquidoValue    = parseFloat(Salliquido.value.trim().replace(',', '.'));
+    var CondominioValue   = parseFloat(Condominio.value .trim().replace(',', '.'));
+    var AluguelValue      = parseFloat(Aluguel.value    .trim().replace(',', '.'));
+    var FaculdadeValue    = parseFloat(Faculdade.value  .trim().replace(',', '.'));
+    var CarroValue        = parseFloat(Carro.value      .trim().replace(',', '.'));
+    var LuzValue          = parseFloat(Luz.value        .trim().replace(',', '.'));
+    var AguaValue         = parseFloat(Agua.value       .trim().replace(',', '.'));
+    var InternetValue     = parseFloat(Internet.value   .trim().replace(',', '.'));
+    var MercadoValue      = parseFloat(Mercado.value    .trim().replace(',', '.'));
+    var CartaoValue       = parseFloat(Cartao.value     .trim().replace(',', '.'));
+    var LazerValue        = parseFloat(Lazer.value      .trim().replace(',', '.'));
+    var OutrosValue       = parseFloat(Outros.value     .trim().replace(',', '.'));
+    var DespesasValue     = 
+        parseFloat(CondominioValue) + 
+        parseFloat(AluguelValue)    + 
+        parseFloat(FaculdadeValue)  + 
+        parseFloat(CarroValue)      + 
+        parseFloat(LuzValue)        + 
+        parseFloat(AguaValue)       + 
+        parseFloat(InternetValue)   + 
+        parseFloat(MercadoValue)    + 
+        parseFloat(CartaoValue)     + 
+        parseFloat(LazerValue)      + 
+        parseFloat(OutrosValue)     ;
+    var InvestimentoValue = SalliquidoValue -DespesasValue
+
+    var formattedValue3 = DespesasValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    var formattedValue4 = InvestimentoValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
     if(SalliquidoValue == ''){
         alert('O Valor do Salario Liquido Encontra-se Vazio!')        
     }
     else{
-        document.getElementById("Investimento").innerHTML = InvestimentoValue;
-        document.getElementById("Despesas").innerHTML = DespesasValue;
+        document.getElementById("Investimento").innerHTML = formattedValue4;
+        document.getElementById("Despesas").innerHTML = formattedValue3;
     }
 }
-
+/*
 function RedirectCad(){
     window.location = "CadastroUsuario.html";
 }
 */
+const formulario1 = document.getElementById('form1');
+const formulario2 = document.getElementById('form2');
+
+function ExibeForm1() {
+    if (formulario1.style.display === 'none') {
+        formulario1.style.display = 'block';
+    } else {
+        formulario1.style.display = 'none';
+    }
+}
+
+function ExibeForm2() {
+    if (formulario2.style.display === 'none') {
+        formulario2.style.display = 'block';
+    } else {
+        formulario2.style.display = 'none';
+    }
+}
 
