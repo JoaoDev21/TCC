@@ -56,7 +56,11 @@ function Calcular() {
 
     if (isNaN(SalarioValue) || SalarioValue === '') {
         alert('O Valor do Salario Encontra-se Vazio ou Inválido!');
-    } else {
+    } 
+    else if(isNaN(inssValue) || inssValue === ''){
+        alert('Deve calcular o valor de INSS antes!');
+    }
+    else {
         document.getElementById("TotalReceber").textContent = formattedValue1;
         document.getElementById("TotalDescontos").textContent = formattedValue2;
     }
