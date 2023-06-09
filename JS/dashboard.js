@@ -1,36 +1,69 @@
 var salario        = document.getElementById('salario');
-var inss           = document.getElementById('inss');
+var INSS_Retido    = document.getElementById('INSS_Retido');
 var transporte     = document.getElementById('transporte');
 var VaVr           = document.getElementById('VaVr');
 var convmedico     = document.getElementById('convmedico');
 var convodonto     = document.getElementById('convodonto');
 var outros         = document.getElementById('outros');
 
-function Calcular(){
-    var SalarioValue           = salario.value        .trim();
-    var inssValue              = inss.value           .trim();
-    var transporteValue        = transporte.value     .trim();
-    var VaVrValue              = VaVr.value           .trim();
-    var convmedicoValue        = convmedico.value     .trim();
-    var convodontoValue        = convodonto.value     .trim();
-    var outrosValue            = outros.value         .trim();
-    var TotalDescontosValue    = parseFloat(inssValue) + parseFloat(transporteValue) + parseFloat(VaVrValue) + parseFloat(convmedicoValue) + parseFloat(convodontoValue) + parseFloat(outrosValue);
-    var TotalReceberValue      = SalarioValue - TotalDescontosValue;
+function CalcularINSS() {
+    var SalarioValue = salario.value.trim();
+    var aliquotas = [0.075, 0.09, 0.12, 0.14, 0.145, 0.165, 0.19, 0.22];
+    var Resultado_INSS;
 
-    if(SalarioValue == ''){
-        alert('O Valor do Salario Encontra-se Vazio!')
+    if (SalarioValue === '') {
+        alert('Preencha o Campo Salario');
+        return;
     }
 
-    else if(inssValue === ''){
-        
-        
+    var i;
+    for (i = 0; i < aliquotas.length; i++) {
+        var minSalary = [0, 1303, 2571.30, 3856.95, 7507.50, 12856.51, 25713.00, 50140.34][i];
+        var maxSalary = [1302, 2571.29, 3856.94, 7507.49, 12856.50, 25712.99, 50140.33, Infinity][i];
+        if (SalarioValue >= minSalary && SalarioValue <= maxSalary) {
+            Resultado_INSS = SalarioValue * aliquotas[i];
+            break;  
+        }
     }
 
-    else{
-        document.getElementById("TotalReceber").innerHTML = TotalReceberValue;
-        document.getElementById("TotalDescontos").innerHTML = TotalDescontosValue;
+    var formattedValue = Resultado_INSS.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    INSS_Retido.textContent = formattedValue;
+    console.log('Valor de INSS_Retido:', Resultado_INSS);
+}
+
+function Calcular() {
+    var SalarioValue    = parseFloat(salario.value.trim().replace(',', '.'));
+    var inssValue       = parseFloat(INSS_Retido.innerText.trim().replace(/[^\d.,]/g, '').replace(',', '.'));
+    var transporteValue = parseFloat(transporte.value.trim().replace(',', '.'));
+    var VaVrValue       = parseFloat(VaVr.value.trim().replace(',', '.'));
+    var convmedicoValue = parseFloat(convmedico.value.trim().replace(',', '.'));
+    var convodontoValue = parseFloat(convodonto.value.trim().replace(',', '.'));
+    var outrosValue     = parseFloat(outros.value.trim().replace(',', '.'));
+
+    console.log('SalarioValue:', SalarioValue);
+    console.log('inssValue:', inssValue);
+    console.log('transporteValue:', transporteValue);
+    console.log('VaVrValue:', VaVrValue);
+    console.log('convmedicoValue:', convmedicoValue);
+    console.log('convodontoValue:', convodontoValue);
+    console.log('outrosValue:', outrosValue);
+
+    var TotalDescontosValue = inssValue + transporteValue + VaVrValue + convmedicoValue + convodontoValue + outrosValue;
+    var TotalReceberValue = SalarioValue - TotalDescontosValue;
+
+    var formattedValue1 = TotalReceberValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    var formattedValue2 = TotalDescontosValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    if (isNaN(SalarioValue) || SalarioValue === '') {
+        alert('O Valor do Salario Encontra-se Vazio ou Inválido!');
+    } else {
+        document.getElementById("TotalReceber").textContent = formattedValue1;
+        document.getElementById("TotalDescontos").textContent = formattedValue2;
     }
 }
+
+
+/*
 var Salliquido   = document.getElementById('Salliquido');
 var Condominio   = document.getElementById('Condominio');
 var Aluguel      = document.getElementById('Aluguel');
@@ -72,4 +105,5 @@ function Calcular_Despesas(){
 function RedirectCad(){
     window.location = "CadastroUsuario.html";
 }
+*/
 

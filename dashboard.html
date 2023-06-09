@@ -33,10 +33,7 @@
             <button type="button" id="sair">SAIR</button>
         </header><hr>
         
-
         <main>
-            
-            
             <form class="form1">
 
                 <section class="Salary">
@@ -58,8 +55,12 @@
                     <section class="inp"></section>
 
 
-                        <label for="inss">INSS:</label><br>
-                        <input type="number" id="inss" placeholder="R$" ><br>
+                        <label for="inss">INSS:</label>
+                        <button type="button" id="btnCalcular" onclick="CalcularINSS()">Calcular</button><br><br>
+                        <a type="number" id="INSS_Retido"></a><br><br>
+
+
+                        <!--<input type="number" id="inss" placeholder="R$" ><br>-->
 
                         <label for="transporte">VL Transporte:</label><br>
                         <input type="number" id="transporte" placeholder="R$"  ><br>
@@ -81,10 +82,10 @@
 
                 <section class="Total">
 
-                    <label for="TotalDescontos">Total Descontos: R$</label>
+                    <label for="TotalDescontos">Total Descontos: </label>
                     <a type="number" id="TotalDescontos"></a><br><br>
 
-                    <label for="TotalReceber">Total a Receber: R$</label>
+                    <label for="TotalReceber">Total a Receber: </label>
                     <a type="number" id="TotalReceber"></a><br><br><hr>
 
                 </section>

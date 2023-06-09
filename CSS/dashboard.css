@@ -1,4 +1,4 @@
-*{
+/**{
     margin: 0;
 }
 html, body{
@@ -29,7 +29,6 @@ main{
     height: 500px;
     display: inline-table ;
     border-radius: 20px;
-    /*border-style: inset;*/
     border-color: black;
 }
 section h1{
@@ -49,5 +48,8 @@ section label{
     display: inline-block;
     width: 30%;
     padding-left: 7.5%;
-}
+}*/
 
+body{
+    background: linear-gradient(to top,hsl(189, 99%, 55%), #0166e1);
+}
