@@ -18,8 +18,6 @@ span {
     background-color: transparent;
     font-size: x-large;
     margin: 1%;
-    margin-top: 1%;
-    margin-bottom: 1%;
     align-items: center;
 }
 
@@ -84,9 +82,14 @@ main .form1 .Despesas .s1,
     justify-content: space-between;
 }
 
-.s2,
-#INSS_Retido,
-#VT_Retido {
+.s2,#INSS_Retido,#VT_Retido {
     margin-left: 1%;
+    border-radius: 12px;
 }
-
+.s9{
+    width: 10%;
+    margin: 1%;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}

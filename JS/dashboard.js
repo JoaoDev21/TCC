@@ -182,11 +182,11 @@ function Calcular_Despesas(){
         document.getElementById("Despesas").innerHTML = formattedValue3;
     }
 }
-/*
-function RedirectCad(){
-    window.location = "CadastroUsuario.html";
+
+function LogOf(){
+    window.location = "login.html";
 }
-*/
+
 const formulario1 = document.getElementById('form1');
 const formulario2 = document.getElementById('form2');
 

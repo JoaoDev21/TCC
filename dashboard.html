@@ -30,13 +30,13 @@
             <h1>Sistema de Controle Financeiro</h1>
             <button type="button" id="historico" style="visibility: hidden;">HISTORICO</button>
             <button type="button" id="dados" onclick="RedirectCad()"style="visibility: hidden;">CADASTRO</button>
-            <button type="button" id="sair">SAIR</button>
+            <button type="button" id="sair" onclick="LogOf()">SAIR</button>
         </header>
         
         <main><hr>
 
-            <span type="button" id="tittleForm1" onclick="ExibeForm1()">SALARIO E DESCONTOS</span>
-            <br>
+            <br><span type="button" id="tittleForm1" onclick="ExibeForm1()">SALARIO E DESCONTOS</span>
+            <br><br>
 
             <form class="form1" id="form1">
 
@@ -50,16 +50,19 @@
                         <input type="date" id="Month">
                     </section>
                     <br><br>
-                </section>
+                </section><hr><br>
                 
                 <section class="Despesas">
 
                     <section class="s2"></section>
-                        <label for="inss">INSS:</label><br><br>
-                        <a type="number" id="INSS_Retido" style="font-size: large;"></a><br><br>
-
-                        <label for="transporte">VL Transporte:</label><br><br>
-                        <a type="number" id="VT_Retido" style="font-size: large;"></a><br><br>
+                        <section class="s9">
+                            <label for="inss">INSS:</label><br><br>
+                            <a type="number" id="INSS_Retido" style="font-size: large;"></a>
+                        </section>
+                        <section class="s9">
+                            <label for="transporte">VL Transporte:</label><br><br>
+                            <a type="number" id="VT_Retido" style="font-size: large;"></a>
+                        </section><br>
 
                         <button type="button" id="btnCalcular" onclick="CalcularINSS()">Calcular</button><br>
 
@@ -78,7 +81,7 @@
                         <section class="s1">
                             <label for="outros">Outros:</label><br>
                             <input type="text" id="outros" placeholder="R$" value="0">
-                        </section><br><br>
+                        </section><br><br><hr>
                     
                 </section><br>
 
@@ -101,7 +104,7 @@
                 
             </form><hr>
 
-            <span type="button" id="tittleForm2" onclick="ExibeForm2()">DESPESAS E LUCROS</span>
+            <br><span type="button" id="tittleForm2" onclick="ExibeForm2()">DESPESAS E LUCROS</span><br><br>
             <hr><br>
 
             <form class="form2" id="form2">
