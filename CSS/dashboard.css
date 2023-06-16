@@ -6,7 +6,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*position: fixed;*/
 }
 
 main {
@@ -92,4 +91,35 @@ main .form1 .Despesas .s1,
     display: inline-block;
     align-items: center;
     justify-content: space-between;
+}
+.form1{
+    margin: 2%;
+    width: 40%;
+    border-style: ridge;
+    border-radius: 12px;
+}
+.s10{
+    text-align: center;
+}
+.form2{
+    margin: 2%;
+    width: 40%;
+    border-style: ridge;
+    border-radius: 12px;
+}
+form{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+.btns{
+    text-align: center;
+    margin: 1%;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+hr{
+    width: 98%;
+    margin-left: 1%;
 }

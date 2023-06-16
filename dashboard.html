@@ -35,10 +35,15 @@
         
         <main><hr>
 
-            <br><span type="button" id="tittleForm1" onclick="ExibeForm1()">SALARIO E DESCONTOS</span>
-            <br><br>
+            <!--<br><span type="button" id="tittleForm1" onclick="ExibeForm1()">SALARIO E DESCONTOS</span>
+            <br><br>-->
 
             <form class="form1" id="form1">
+                    
+                    <br>
+                    <section class="s10">
+                        <span type="button" id="tittleForm1">SALARIO E DESCONTOS</span><br><br>
+                    </section>
 
                     <hr><br>
                     <section class="s3">
@@ -60,7 +65,7 @@
                             <a type="number" id="INSS_Retido" style="font-size: large;"></a>
                         </section>
                         <section class="s9">
-                            <label for="transporte">VL Transporte:</label><br><br>
+                            <label for="transporte">Transporte:</label><br><br>
                             <a type="number" id="VT_Retido" style="font-size: large;"></a>
                         </section><br>
 
@@ -96,18 +101,25 @@
                 </section>
 
                 <section class="Calcular">
-
-                    <button type="button" id="btnCalcular" onclick="Calcular()">Calcular</button>
-                    <button type="button" id="btnXLS" onclick="GerarXLS()">XLS</button><br>
-
+                    <section class="btns">
+                        <button type="button" id="btnCalcular" onclick="Calcular()">Calcular</button>
+                    </section>
+                    <section class="btns">
+                        <button type="button" id="btnXLS" onclick="GerarXLS()">XLS</button>
+                    </section>
                 </section>
-                
-            </form><hr>
+            </form>
 
-            <br><span type="button" id="tittleForm2" onclick="ExibeForm2()">DESPESAS E LUCROS</span><br><br>
-            <hr><br>
+            <!--<br><span type="button" id="tittleForm2" onclick="ExibeForm2()">DESPESAS E LUCROS</span><br><br>
+            <hr><br>-->
 
             <form class="form2" id="form2">
+
+                <br>
+                <section class="s10">
+                    <span type="button" id="tittleForm2" onclick="ExibeForm2()">DESPESAS E LUCROS</span><br><br>
+                    <hr><br>
+                </section>
 
                 <section class="Despesas">
 
@@ -169,13 +181,16 @@
 
                     <label for="Investimento">Investimento: </label>
                     <a type="number" id="Investimento"></a><br><br>
-                    <hr>
 
                  </section>
                  <section class="Calcular1">
-
-                    <button type="button" id="btnCalcular1" onclick="Calcular_Despesas()">Calcular</button><br>
-                    <button type="button" id="btnSalvar" onclick="Salvar()">Salvar</button>
+                    
+                    <section class="btns">
+                        <button type="button" id="btnCalcular1" onclick="Calcular_Despesas()">Calcular</button><br>
+                    </section>
+                    <section class="btns">
+                        <button type="button" id="btnSalvar" onclick="Salvar()">Salvar</button>
+                    </section>
 
                  </section>
 
